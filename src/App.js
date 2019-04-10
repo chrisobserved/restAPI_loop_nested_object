@@ -30,6 +30,7 @@ class App extends Component {
             x.fullName = x.firstName + ' ' + x.lastName;
             return x
           });
+
         this.setState({ members });
       })
   }
