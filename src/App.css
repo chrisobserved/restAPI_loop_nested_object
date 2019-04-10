@@ -1,43 +1,58 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
-  padding: 50px 0;
+  color: #6a6a6a;
 }
 
 .membersList {
+  display: flex;
+  justify-content: center;
   line-height: 2;
-  padding: 5px 0;
-  transition: all 325ms ease;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
+  padding-bottom: 10px;
+  animation: fadeToggle;
+  -webkit-animation: fadeToggle; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeToggle; /* Firefox < 16 */
+  -ms-animation: fadeToggle; /* Internet Explorer */
+  -o-animation: fadeToggle; /* Opera < 12.1 */
+  animation-direction: alternate;
+  transition: all 325ms linear;
 }
+  .membersList:hover {
+    color: #212121;
+    transform: scale(1.2);
+  }
 
-.membersList:hover {
-  color: #212121;
-  transform: scale(1.2);
-}
+.membersHeader {
+  display: block;
+  color: #f2f2f2;
+  font-family: sans-serif;
+  padding: 10px 0;
+  margin: 0 0 15px 0;
+  top: 0;
+  width: 100%;
+  font-size: 1.35rem;
+  background: #333333
+} 
 
-@keyframes fadein {
+/***************
+// Animations //
+***************/
+@keyframes fadeToggle {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadeToggle {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+  /* Firefox < 16 */
+  @-moz-keyframes fadeToggle {
     from { opacity: 0; }
     to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+  }
+  /* Internet Explorer */
+  @-ms-keyframes fadeToggle {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
