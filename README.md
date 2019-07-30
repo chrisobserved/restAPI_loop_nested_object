@@ -1,6 +1,6 @@
-## [Demo App](https://laughing-montalcini-21c8bf.netlify.com/)
+### [App Demo](https://laughing-montalcini-21c8bf.netlify.com/)
 
-<br><br>
+<br>
 
 ## Available Scripts
 
